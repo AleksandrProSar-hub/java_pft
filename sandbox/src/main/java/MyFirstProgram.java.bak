@@ -5,10 +5,10 @@ public class Test1 {
         hello("user");
         hello("Alexei");
 
-        Square s = new Square(5); // s - переменная
+        ru.stqa.pft.sandbox.Square s = new ru.stqa.pft.sandbox.Square(5); // s - переменная
         System.out.println("Площадь треугольника со стороной " + s.l + "=" + s.area());
 
-        Rectangle r = new Rectangle(4,6);
+        ru.stqa.pft.sandbox.Rectangle r = new ru.stqa.pft.sandbox.Rectangle(4,6);
         System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " = " + r.area());
         }
 
