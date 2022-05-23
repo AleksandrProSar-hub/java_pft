@@ -1,13 +1,13 @@
 package ru.stqa.pft.addressbook.appManager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactHelper {
-  public ChromeDriver driver;
+  public WebDriver driver;
 
-  public ContactHelper(ChromeDriver driver) {
+  public ContactHelper(WebDriver driver) {
     this.driver=driver;
   }
 

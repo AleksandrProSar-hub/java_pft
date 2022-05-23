@@ -8,7 +8,7 @@ public class GroupDeletionTests extends TestBase {
 
   @BeforeMethod
   public void ensurePreconditions() {
-    app.goTo().goToGroupPage();
+    app.goTo().groupPage();
   }
 
   @Test

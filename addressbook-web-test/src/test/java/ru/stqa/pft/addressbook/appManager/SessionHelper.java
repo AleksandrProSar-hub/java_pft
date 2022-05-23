@@ -2,11 +2,11 @@ package ru.stqa.pft.addressbook.appManager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class SessionHelper extends HelperBase{
 
-    public SessionHelper(ChromeDriver driver) {
+    public SessionHelper(WebDriver driver) {
 
         super(driver);
     }

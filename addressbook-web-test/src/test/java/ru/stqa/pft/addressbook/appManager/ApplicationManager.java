@@ -2,18 +2,36 @@ package ru.stqa.pft.addressbook.appManager;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 public class ApplicationManager {
-    public ChromeDriver driver;
+    private  String browser;
+    public WebDriver driver;
     public ContactHelper contactHelper;
     public SessionHelper sessionHelper;
     public NavigationHelper navigationHelper;
     public GroupHelper groupHelper;
 
+    public ApplicationManager(String browser) {
+        this.browser = browser;
+    }
+
     public void init() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\prota\\Downloads\\chromedriver_win32\\chromedriver.exe");
-        driver = new ChromeDriver();
+        if (browser == BrowserType.CHROME){
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\prota\\Downloads\\chromedriver_win32\\chromedriver.exe");
+            driver = new ChromeDriver();
+        } else if (browser == BrowserType.FIREFOX) {
+            System.setProperty("webdriver.gecko.driver", "C:\\Users\\prota\\Downloads\\chromedriver_win32\\geckodriver.exe");
+            driver = new FirefoxDriver();
+        } else if (browser == BrowserType.EDGE) {
+            System.setProperty("webdriver.edge.driver", "C:\\Users\\prota\\Downloads\\chromedriver_win32\\edgedriver_win64\\msedgedriver.exe");
+            driver = new EdgeDriver();
+        }
+
         groupHelper = new GroupHelper(driver);
         contactHelper = new ContactHelper(driver);
         navigationHelper = new NavigationHelper(driver);
