@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = "GroupCreationTests"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:4.1.4'
+    implementation 'org.testng:testng:6.9.10'
+    implementation 'junit:junit:4.13.1'
+}
+
+test {
+    useTestNG()
+ }
+
+/* test {
+    useJUnitPlatform()
+} */
+
+
+
