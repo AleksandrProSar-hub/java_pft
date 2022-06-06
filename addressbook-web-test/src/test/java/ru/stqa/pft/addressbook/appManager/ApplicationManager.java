@@ -8,7 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 
-public class ApplicationManager {
+public class ApplicationManager  {
     private  String browser;
     public WebDriver driver;
     public ContactHelper contactHelper;
